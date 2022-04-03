@@ -1,21 +1,20 @@
 package W7_ATM;
 
-//Represents the screen of the ATM
-public class Screen {
-	// display a message without a carriage return
-	public void displayMessage(String message) {
-		System.out.print(message); 
+//Represents the keypad of the ATM
+import java.util.Scanner; // program uses Scanner to obtain user input
+
+public class Keypad {
+	private Scanner input; // reads data from the command line
+                      
+	// no-argument constructor initializes the Scanner
+	public Keypad() {
+		input = new Scanner(System.in);    
 	} 
 
-	// display a message with a carriage return
-	public void displayMessageLine(String message) {
-		System.out.println(message);   
+	// return an integer value entered by user 
+	public int getInput() {
+		return input.nextInt(); // we assume that user enters an integer
 	} 
-
-	// displays a dollar amount
-	public void displayDollarAmount(double amount) {
-		System.out.printf("$%,.2f", amount);   
-	}
 } 
 
 /**************************************************************************

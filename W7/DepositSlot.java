@@ -1,21 +1,12 @@
 package W7_ATM;
 
-//Represents the screen of the ATM
-public class Screen {
-	// display a message without a carriage return
-	public void displayMessage(String message) {
-		System.out.print(message); 
+//Represents the deposit slot of the ATM
+public class DepositSlot {
+	// indicates whether envelope was received (always returns true, 
+	// because this is only a software simulation of a real deposit slot)
+	public boolean isEnvelopeReceived() {
+		return true; // deposit envelope was received
 	} 
-
-	// display a message with a carriage return
-	public void displayMessageLine(String message) {
-		System.out.println(message);   
-	} 
-
-	// displays a dollar amount
-	public void displayDollarAmount(double amount) {
-		System.out.printf("$%,.2f", amount);   
-	}
 } 
 
 /**************************************************************************
